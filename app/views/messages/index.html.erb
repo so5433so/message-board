@@ -13,10 +13,27 @@
 </div>
   
 <%= form_for(@message) do |f| %>
-  名前:
-  <%= f.text_field :name %>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-user" aria-hidden="true" >名前:</span>
+    </span>
+      <%= f.text_field :name, placeholder: "山田　太郎" %>
+  </div>
   
-  内容
-  <%= f.text_field :body %>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+  <br>
+  
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-align-left" aria-hidden="true">内容:</span>
+    </span>
+      <%= f.text_area :body, cols: 100, rows: 10, maxlength: "200", placeholder: "ご自由にコメントください" %>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  
+  <span class="glyphicon glyphicon-send" aria-hidden="true">
+    <%= f.submit class: "btn btn-sm btn-prifmary" %>
+  </span>
 <% end %>
