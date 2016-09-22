@@ -13,6 +13,30 @@
 </div>
   
 <%= form_for(@message) do |f| %>
+
+<% if @message.errors.present? %>
+
+  <div class="alert alert-danger">
+    
+<%= alert %>
+
+    <ul>
+      
+<% @message.errors.full_messages.each do |full_message| %>
+
+      <li>
+        
+<%= full_message %>
+
+      </li>
+      
+<% end %>
+
+    </ul>
+  </div>
+<% end %>
+
+
   <div class="input-group">
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-user" aria-hidden="true" >名前:</span>
