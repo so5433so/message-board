@@ -5,59 +5,15 @@
   
   <div class="panel-body">
     <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
-      <%= message.body %>
-      <br>
-      <% end %>
+      <span class="label label-info">
+        <%= message.name %>
+      </span>
+      
+        <%= message.body %>
+        <br>
+    <% end %>
+    
   </div>
 </div>
-  
-<%= form_for(@message) do |f| %>
 
-<% if @message.errors.present? %>
-
-  <div class="alert alert-danger">
-    
-<%= alert %>
-
-    <ul>
-      
-<% @message.errors.full_messages.each do |full_message| %>
-
-      <li>
-        
-<%= full_message %>
-
-      </li>
-      
-<% end %>
-
-    </ul>
-  </div>
-<% end %>
-
-
-  <div class="input-group">
-    <span class="input-group-addon">
-      <span class="glyphicon glyphicon-user" aria-hidden="true" >名前:</span>
-    </span>
-      <%= f.text_field :name, class: "form-control", placeholder: "山田　太郎" %>
-  </div>
-  
-  <br>
-  
-  <div class="input-group">
-    <span class="input-group-addon">
-      <span class="glyphicon glyphicon-align-left" aria-hidden="true">内容:</span>
-    </span>
-      <%= f.text_area :body, cols: 100, rows: 10, maxlength: "200",class: "form-control", placeholder: "ご自由にコメントください" %>
-  </div>
-  
-  <br>
-  <br>
-  <br>
-  
-  <span class="glyphicon glyphicon-send" aria-hidden="true">
-    <%= f.submit class: "btn btn-sm btn-prifmary" %>
-  </span>
-<% end %>
+<%= render 'form' %>
