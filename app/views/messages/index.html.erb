@@ -17,7 +17,7 @@
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-user" aria-hidden="true" >名前:</span>
     </span>
-      <%= f.text_field :name, placeholder: "山田　太郎" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "山田　太郎" %>
   </div>
   
   <br>
@@ -26,7 +26,7 @@
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-align-left" aria-hidden="true">内容:</span>
     </span>
-      <%= f.text_area :body, cols: 100, rows: 10, maxlength: "200", placeholder: "ご自由にコメントください" %>
+      <%= f.text_area :body, cols: 100, rows: 10, maxlength: "200",class: "form-control", placeholder: "ご自由にコメントください" %>
   </div>
   
   <br>
