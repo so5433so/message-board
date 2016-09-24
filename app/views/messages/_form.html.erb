@@ -28,7 +28,16 @@
     <span class="input-group-addon">
       <span class="glyphicon glyphicon-user" aria-hidden="true" >名前:</span>
     </span>
-      <%= f.text_field :name, class: "form-control", placeholder: "山田　太郎" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "山田　太郎", size:"10" %>
+  </div>
+  
+  <br>
+  
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="glyphicon glyphicon-leaf" aria-hidden="true" >年齢:</span>
+    </span>
+      <%= f.text_field :age, class: "form-control", size:"5", placeholder: "年齢" %>
   </div>
   
   <br>
